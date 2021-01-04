@@ -1,0 +1,15 @@
+[package]
+name = "gpgpu-backend"
+version = "0.0.1"
+authors = ["VZout <viktor.zoutman@embark-studios.com>"]
+edition = "2018"
+
+[lib]
+path = "backend.rs" 
+
+[dependencies]
+wgpu = "0.6.2"
+lazy_static = "1.4.0"
+futures = "0.3.8"
+log = "0.4"
+env_logger = "0.7"

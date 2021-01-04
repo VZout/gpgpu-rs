@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "example",
+	"example/gpu",
+	
+	"gpgpu-macro",
+    "gpgpu-backend",
+]
+default-members = ["example"]

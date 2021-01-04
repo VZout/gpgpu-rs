@@ -1,0 +1,26 @@
+[package]
+name = "gpgpu-example"
+version = "0.0.1"
+authors = ["VZout <viktor.zoutman@embark-studios.com>"]
+edition = "2018"
+
+[[bin]]
+name = "gpgpu-example"
+path = "main.rs"
+
+[dependencies]
+gpgpu = { path = "../gpgpu-macro", features = ["cpu"]}
+gpgpu-backend = { path = "../gpgpu-backend" }
+spirv-std = { git = "https://github.com/EmbarkStudios/rust-gpu", branch="main" }
+wgpu = "0.6.2"
+lazy_static = "1.4.0"
+futures = "0.3.8"
+
+[build-dependencies]
+spirv-builder = { git = "https://github.com/EmbarkStudios/rust-gpu", branch="main", default-features = false }
+
+[features]
+use-installed-tools = ["spirv-builder/use-installed-tools"]
+use-compiled-tools = ["spirv-builder/use-compiled-tools"]
+default = ["cpu", "use-compiled-tools"]
+cpu = ["gpgpu/cpu"]

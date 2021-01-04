@@ -1,0 +1,17 @@
+[package]
+name = "gpgpu-example-gpu"
+version = "0.0.1"
+authors = ["VZout <viktor.zoutman@embark-studios.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["dylib"]
+path = "../main.rs"
+
+[dependencies]
+gpgpu = { path = "../../gpgpu-macro", features = ["gpu"] }
+spirv-std = { git = "https://github.com/EmbarkStudios/rust-gpu", branch="main" }
+
+[features]
+default = ["gpu"]
+gpu = ["gpgpu/gpu"]

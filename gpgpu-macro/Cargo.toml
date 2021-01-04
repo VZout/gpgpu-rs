@@ -1,0 +1,14 @@
+[package]
+name = "gpgpu"
+version = "0.0.1"
+authors = ["VZout <viktor.zoutman@embark-studios.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+path = "lib.rs"
+
+[features]
+default = []
+cpu = []
+gpu = []
