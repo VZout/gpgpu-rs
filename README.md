@@ -1,3 +1,8 @@
+<p align="center"><strong>gpgpu-rs</strong></p>
+<p align="center">
+  <i><q>Exploration of inline GPU code within rust</q></i>
+</p>
+
 ### Introduction
 
 This is a proof of concept showcasing inline shaders/kernels intertwined with CPU code. Currently only the graphical compute shading stage is supported.
